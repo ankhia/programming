@@ -64,13 +64,13 @@ public class Uva11844 {
 			
 			int k = 0;
 			if( isDeterministic ){
-				for (int j = 0; j < n && !isCure; j++) {
+				for (int j = 0; j <= n && !isCure; j++) {
 					if( iguales(vi, cu) ){
 						isCure = true;
 					}else{
-						System.out.println("Muta de: " + vi);
-						mutar(vi);
-						System.out.println("Muta a : " + vi );
+//						System.out.println("Muta de: " + vi);
+						mutar( );
+//						System.out.println("Muta a : " + vi );
 					}
 					k = j;
 				}
@@ -89,32 +89,32 @@ public class Uva11844 {
 		System.out.print(new String(sb));
 	}
 
-	public static void mutar( TreeMap<String, Integer> vi ) {
-		ArrayList<String> keysToDelete = new ArrayList<String>();
-		ArrayList<String> keysToAdd = new ArrayList<String>();
-		for (String key : vi.keySet() ) {
-			if( mu.containsKey( key ) ){
-				keysToAdd.add(mu.get(key));
-				keysToDelete.add( key );
+	public static void mutar(  ) {
+		TreeMap<String, Integer> tmp = new TreeMap<String, Integer>();
+		for (String key : mu.keySet()) {
+			if( vi.containsKey(key) ){
+				String nKey  = mu.get(key);
+				if(tmp.containsKey(nKey))
+					tmp.put( nKey , tmp.get(nKey)+ vi.get(key));
+				else
+					tmp.put( nKey ,  vi.get(key));
+				vi.remove(key);
 			}
 		}
-		for (int i = 0; i < keysToDelete.size(); i++) {
-			String keyDel  =  keysToDelete.get(i);
-			String keyAdd  =  keysToAdd.get(i);
-			System.out.println( keyDel + "  " + keyAdd );
- 			if( vi.containsKey(keyAdd) ){
-				vi.put(keyAdd, vi.get(keyAdd)+vi.get(keyDel));
+		for (String key : vi.keySet()) {
+			if(tmp.containsKey(key)){
+				tmp.put(key, tmp.get(key)+vi.get(key));
 			}else{
-				vi.put(keyAdd,vi.get(keyDel));
+				tmp.put(key, vi.get(key));
 			}
- 			vi.remove(keyDel);
 		}
+		vi = tmp;
 	}
 	
 	public static boolean iguales( TreeMap<String, Integer> vi , TreeMap<String, Integer> cu ){
 		boolean iguales = true;
 		for (String key : cu.keySet() ) {
-			if( vi.containsKey(key) && vi.get(key) != cu.get(key) )
+			if( vi.containsKey(key) && vi.get(key).compareTo( cu.get(key) ) != 0 )
 				iguales = false;
 			else if( !vi.containsKey(key) )
 				iguales = false;
