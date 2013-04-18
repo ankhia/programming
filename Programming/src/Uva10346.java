@@ -19,8 +19,10 @@ public class Uva10346 {
 	
 	private static long solve(long n, long k) {
 		long sum = n;
-		while(  n >= k  ) {
-			sum+=( n=(long) Math.floor(n/k) );
+		while( n >= k ){
+			long res = (long) Math.floor(n%k); 
+			sum += n/=k ;
+			n+= res;
 		}
 		return sum;
 	}
