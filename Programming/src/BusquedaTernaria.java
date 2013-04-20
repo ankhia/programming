@@ -1,6 +1,13 @@
 import java.io.*;
 import java.util.*;
 
+
+/**
+ * http://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=24&page=show_problem&problem=1326
+ * Uva 10385
+ * Duathlon
+ * @author Milena
+ */
 public class BusquedaTernaria {
 
 	static double rv[];
