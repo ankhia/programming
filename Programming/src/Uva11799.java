@@ -9,13 +9,17 @@ public class Uva11799 {
 		BufferedReader in = new BufferedReader( new InputStreamReader( System.in ) );
 		int tc = Integer.parseInt(in.readLine());
 		for (int t = 0; t < tc; t++) {
-			StringTokenizer st = new StringTokenizer(in.readLine());
-			st.nextToken();
 			int max = Integer.MIN_VALUE;
-			int act = Integer.parseInt(st.nextToken()); 
-			if( act > max)
-				max = act;
+			StringTokenizer st = new StringTokenizer(in.readLine());
+			int cant = Integer.parseInt(st.nextToken());
+			while(cant-->0){
+				int act = Integer.parseInt(st.nextToken()); 
+				if( act > max)
+					max = act;
+			}
 			System.out.println("Case "+(t+1)+": "+max);
 		}
 	}
 }
+
+
