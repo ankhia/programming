@@ -11,6 +11,7 @@ public class RandomWash {
 	static ArrayList<String> perdedores;
 	static String MSG_SALVADO = "PEGO EN EL PALO : ";
 	static String MSG_LE_TOCO = " GOOOOLAZO DE ";
+	
 	static int rondas = 2;
 	static int oport = 3;
 	static ArrayList<String> od1enses;
