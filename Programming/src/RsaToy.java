@@ -9,10 +9,11 @@ import java.security.spec.RSAPublicKeySpec;
 
 import javax.crypto.Cipher;
 
-import org.bouncycastle.jce.provider.BouncyCastleProvider;
+//import org.bouncycastle.jce.provider.BouncyCastleProvider;
 
 /**
   13:  * Basic RSA example.
+  NECESITA LA LIBRERIA BOUNCYCASTLE}!!!
   14:  */
 public class RsaToy
 {
@@ -21,7 +22,7 @@ public class RsaToy
 					throws Exception
 					{
 		byte[]           input = "hola mundo hola ".getBytes();
-		Security.addProvider(new  BouncyCastleProvider());
+//		Security.addProvider(new  BouncyCastleProvider());
 		Cipher             cipher = Cipher.getInstance("RSA/None/NoPadding", "BC");
 		
 		KeyFactory       keyFactory = KeyFactory.getInstance("RSA", "BC");

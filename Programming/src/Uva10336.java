@@ -1,5 +1,7 @@
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
+import java.util.Arrays;
+import java.util.Comparator;
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.StringTokenizer;
@@ -13,6 +15,7 @@ public class Uva10336 {
 	static int dx[]={-1,1,0,0};
 	static int dy[]={ 0,0,1,-1};
 	static TreeMap<Character, Integer> tree;
+	static int[][]nM;
 	public static void main(String[] args) throws Throwable {
 		BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
 		StringBuilder sb = new StringBuilder();
@@ -43,9 +46,38 @@ public class Uva10336 {
 					}
 				}
 			}
+//			System.out.println(tree.toString());
 			sb.append("World #"+(t+1)+"\n");
 			//ORDENAR ESA VUELTA
+			nM = new int[tree.size()][2];
+		
+//			System.out.println( (int) ('a' - 'a'));
+			int j = 0;
+			for (Character key : tree.keySet()) {
+					nM[j][0] = (int)(key - 'a');
+					nM[j][1] = tree.get(key);
+					j++;
+			}
+//			System.out.println("-->");
+//			for (int i = 0; i < nM.length; i++) {
+//				for (int kj = 0; kj < nM[i].length; kj++) {
+//					System.out.print(nM[i][kj]+" ");
+//				}
+//				System.out.println();
+//			}
+			
+			Arrays.sort(nM, new Comparator<int[]>() {
+				public int compare(int[] o1, int[] o2) {
+					return o2[1]-o1[1]==0?o1[0]-o2[0]:o2[1]-o1[1];
+				}
+			});
+			
 			//ITERAR ESA VUELTA
+			
+			for (int i = 0; i < nM.length; i++) {
+				sb.append((char)(nM[i][0]+'a')+": "+nM[i][1]+"\n");
+			}
+			
 			//IMPRIMIR ESA VUELTA
 		}
 		System.out.print(new String(sb));
