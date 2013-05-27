@@ -19,7 +19,6 @@ public class Uva10943 {
 				dp[i][j] = (dp[i-1][j]%1000000+dp[i][j-1]%1000000)%1000000;
 			}
 		}
-		
 	}
 	
 	public static void main(String[] args) throws Throwable {
