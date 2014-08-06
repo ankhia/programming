@@ -11,7 +11,6 @@ public class Uva11559 {
 	static int w;
 	static int[] hotels;
 	static int[][] weekends;
-	static int[]suma;
 	public static void main(String[] args) throws Throwable {
 		BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
 		for (String line; (line = in.readLine())!=null; ) {
@@ -20,7 +19,6 @@ public class Uva11559 {
 			 b = Integer.parseInt(st.nextToken());
 			 h = Integer.parseInt(st.nextToken());
 			 w = Integer.parseInt(st.nextToken());
-			
 			hotels = new int[h];
 			weekends = new int[h][w];
 			for (int i = 0; i < h; i++){ 
