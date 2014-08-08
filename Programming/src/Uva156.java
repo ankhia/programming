@@ -20,7 +20,6 @@ import java.util.TreeSet;
 
 
 public class Uva156 {
-	
 	static TreeMap<String, ArrayList<String>> count;
 	static TreeSet<String> words;
 	public static void main(String[] args) throws Throwable {
@@ -48,13 +47,11 @@ public class Uva156 {
 				}
 			}
 		}
-		for ( String key : count.keySet() ) {
+		for ( String key : count.keySet() ) 
 			if( count.get(key).size() == 1 )
 				words.add(count.get(key).get(0));
-		}
-		for(String key : words){
+		for(String key : words)
 			sb.append(key).append("\n");
-		}
 		System.out.print(new String(sb));
 	}
 }
