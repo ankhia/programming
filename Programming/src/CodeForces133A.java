@@ -10,7 +10,5 @@ public class CodeForces133A {
 		if( line.contains("H")||line.contains("Q")||line.contains("9"))
 			System.out.println("YES");
 		else System.out.println("NO");
-		
 	}
-
 }
