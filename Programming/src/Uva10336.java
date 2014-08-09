@@ -86,7 +86,6 @@ public class Uva10336 {
 	public static void floodfill(int i, int j , char source){
 		Queue<Integer> x = new LinkedList<Integer>();
 		Queue<Integer> y = new LinkedList<Integer>();
-		
 		x.add(i);
 		y.add(j);
 		v[i][j]=true;
