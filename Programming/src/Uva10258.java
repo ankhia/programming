@@ -27,7 +27,7 @@ public class Uva10258 {
 				int penalPosition = Integer.parseInt(st.nextToken())-1;
 				int valuePosition = Integer.parseInt(st.nextToken());
 				char judge = st.nextToken().trim().charAt(0);
-				if( judge ==  'C' || judge == 'I' ){
+//				if( judge ==  'C' || judge == 'I' ){
 					int[] penalties;
 					boolean[] solve;
 					int[] cantPenales;
@@ -43,16 +43,16 @@ public class Uva10258 {
 					}
 					if( judge == 'I' && !solve[penalPosition]){
 						cantPenales[penalPosition] += 1;
-					}else if( !solve[penalPosition] ){
+					}else if( judge== 'C' && !solve[penalPosition] ){
 						penalties[penalPosition] += valuePosition; 
 						penalties[penalties.length-1]+=valuePosition;
+						solve[penalPosition]=true;
 					}
-					solve[penalPosition]=(judge=='C')?true:solve[penalPosition]?true:false;
 					score.put(team, penalties);
 					solved.put(team, solve);
 					penales.put(team, cantPenales);
 				}
-			}
+//			}
 			solve( );
 			if( i < N-1 )
 				sb.append("\n");
