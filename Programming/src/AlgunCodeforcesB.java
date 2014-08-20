@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.StringTokenizer;
 
 
-public class B {
+public class AlgunCodeforcesB {
 
 	static int num[];
 	static int[] sum;
