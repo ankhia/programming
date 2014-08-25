@@ -73,5 +73,4 @@ public class Uva195 {
 	           else res[j] = temp[i++];
 	     return res;
 	 }
-	
 }
