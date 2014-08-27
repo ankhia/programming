@@ -17,9 +17,13 @@ public class Uva12157 {
 			StringTokenizer st = new StringTokenizer(in.readLine());
 			for (int i = 0; i < calls; i++) {
 				int call = Integer.parseInt(st.nextToken( ));
-				totalMile  += ( Math.ceil( call / 29.  ) * 10 );
-				totalJuice += ( Math.ceil( call / 59.  ) * 15 );
+				totalMile  += ( Math.ceil( call / 30.  ) );
+				if( call % 30 == 0 ) totalMile++;
+				totalJuice += ( Math.ceil( call / 60.  ) );
+				if( call % 60 == 0 ) totalJuice++;
 			}
+			totalMile*=10;
+			totalJuice*=15;
 			sb.append(  totalMile < totalJuice ? "Mile "+totalMile : totalMile == totalJuice ? "Mile Juice "+totalJuice : "Juice "+totalJuice  ).append("\n");
 		}
 		System.out.print(new String(sb));
