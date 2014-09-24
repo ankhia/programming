@@ -4,7 +4,6 @@ public class CodeForces466C {
 	static int valor[];
 	static int n;
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		valor = new int[]{1,3,6,6,9};
 		n = valor.length;
 		System.out.println("--->"+ways(1, 1));
