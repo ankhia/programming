@@ -12,8 +12,7 @@ public class Uva353 {
 		StringBuilder sb = new StringBuilder( );
 		for (String ln ; (ln = in.readLine())!=null; ) {
 			StringTokenizer st = new StringTokenizer(ln.trim());
-			String palabra = st.nextToken(); 
-			String line = palabra.toLowerCase();
+			String line = st.nextToken();
 			pal = new TreeSet<String>();
 			for (int i = 0; i < line.length(); i++) {
 				for (int j = i+1; j <= line.length(); j++) {
@@ -24,7 +23,7 @@ public class Uva353 {
 				}
 			}
 //			System.out.print(pal);
-			sb.append("The string '"+palabra+"' contains "+pal.size()+" palidromes.").append("\n");
+			sb.append("The string '"+line+"' contains "+pal.size()+" palidromes.").append("\n");
 		}
 		System.out.print(new String(sb));
 	}
