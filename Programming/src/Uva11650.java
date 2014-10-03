@@ -29,8 +29,8 @@ public class Uva11650 {
 		tree= new TreeMap<String, String>();
 		int h = 1;
 		int m = 59;
-		for (int i = 0; i < 12; i++) {
-			for (int j = 0, k = 60; j < 60 && k >= 0 ; j++, k--) {
+		for (int i = 1; i <= 12; i++) {
+			for (int j = 0, k = 59; j < 60 && k >= 0 ; j++, k--) {
 				System.out.println(i+":"+j + " = " + (i-1)+":"+k);
 			}
 		}
