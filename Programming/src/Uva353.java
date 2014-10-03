@@ -11,8 +11,8 @@ public class Uva353 {
 		BufferedReader in = new BufferedReader( new InputStreamReader(System.in) );
 		StringBuilder sb = new StringBuilder( );
 		for (String ln ; (ln = in.readLine())!=null; ) {
-			StringTokenizer st = new StringTokenizer(ln.trim());
-			String line = st.nextToken();
+			String p = ln;
+			String line = p.toLowerCase();
 			pal = new TreeSet<String>();
 			for (int i = 0; i < line.length(); i++) {
 				for (int j = i+1; j <= line.length(); j++) {
@@ -23,7 +23,7 @@ public class Uva353 {
 				}
 			}
 //			System.out.print(pal);
-			sb.append("The string '"+line+"' contains "+pal.size()+" palidromes.").append("\n");
+			sb.append("The string '"+p+"' contains "+pal.size()+" palindromes.").append("\n");
 		}
 		System.out.print(new String(sb));
 	}
