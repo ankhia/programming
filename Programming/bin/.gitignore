@@ -1,9 +1,6 @@
-/Uva10954.class
-/Uva10963.class
-/Uva10970.class
-/Uva11003.class
 /Uva11015.class
 /Uva11044.class
+/Uva11057.class
 /Uva11059.class
 /Uva11111.class
 /Uva11121.class
@@ -12,6 +9,8 @@
 /Uva11172.class
 /Uva11185.class
 /Uva11192.class
+/Uva11219.class
+/Uva11221.class
 /Uva11233.class
 /Uva1124.class
 /Uva11243$1.class
@@ -52,6 +51,7 @@
 /Uva119.class
 /Uva11942.class
 /Uva11984.class
+/Uva120.class
 /Uva12015$1.class
 /Uva12015.class
 /Uva12157.class
@@ -74,11 +74,6 @@
 /Uva12577.class
 /Uva136.class
 /Uva138.class
-/CodeForces467A.class
-/CodeForces467B.class
-/Issues.class
-/Uva120.class
-/od1Cosa.class
 /Uva145.class
 /Uva151.class
 /Uva156.class
@@ -93,6 +88,7 @@
 /Uva336.class
 /Uva338.class
 /Uva340.class
+/Uva353.class
 /Uva355.class
 /Uva357.class
 /Uva369.class
@@ -100,6 +96,7 @@
 /Uva382.class
 /Uva383.class
 /Uva386.class
+/Uva400.class
 /Uva401.class
 /Uva402.class
 /Uva414.class
@@ -147,11 +144,12 @@
 /elevator.class
 /haunted.class
 /hero.class
-/in.txt
 /knigs$1.class
 /knigs$2.class
 /knigs.class
 /ls.class
+/od1Cosa$1.class
+/od1Cosa.class
 /pruebita.class
 /regex.class
 /review.class
@@ -160,15 +158,3 @@
 /sweets.class
 /trading.class
 /unicycles.class
-/Uva10919.class
-/Uva353.class
-/Uva11221.class
-/Uva11057.class
-/Test$Bloque.class
-/Bloque.class
-/Dia.class
-/Hora.class
-/Clase.class
-/Materia.class
-/Uva11219.class
-/Uva400.class
