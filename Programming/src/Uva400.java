@@ -44,18 +44,14 @@ public class Uva400 {
 					y += maxTam+2;
 			}
 			
-			
-			// TODO --- cols en lugar de pals... max tam except the last
 			for (int i = 0; i < matriz.length; i++) {
-				boolean first = false;
-				StringBuilder sbRow = new StringBuilder();
-				for (int j = matriz[0].length-1; j >= 0; j--){
-					if( matriz[i][j] !='\0' || first){
-						first = true;
-						sbRow.append(matriz[i][j]);
+				int h = 0;
+				for (int j = 0; j < c; j++){
+					int temp = h;
+					for (int j2 = h; j2 < (j < c-1?temp+maxTam+2:temp+maxTam ); j2++, h++) {
+						sb.append(matriz[i][j2]);
 					}
 				}
-				sb.append(sbRow.reverse());
 				sb.append("\n");
 			}
 		}
@@ -71,5 +67,4 @@ public class Uva400 {
 		}
 		return lista;
 	}
-	
 }
