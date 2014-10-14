@@ -1,8 +1,7 @@
 import java.io.BufferedReader;
-import java.io.FileWriter;
 import java.io.InputStreamReader;
-import java.io.PrintWriter;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.TreeMap;
 
 
@@ -12,8 +11,6 @@ public class Uva400 {
 	static TreeMap<String, Integer> palabras;
 	public static void main(String[] args) throws Throwable {
 		BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
-		FileWriter fichero = null;
-        PrintWriter pw = null;
 		StringBuilder sb = new StringBuilder();
 		for (String ln ; (ln = in.readLine())!= null;) {
 			palabras = new TreeMap<String, Integer>();
@@ -38,7 +35,9 @@ public class Uva400 {
 			int c = (int) (Math.floor( (60.-maxTam) / (maxTam+2) ) + 1);
 			int r = (int) Math.ceil( (double) cantPal / (double) c);
 			matriz = new char[r][60];
-			
+			for (int i = 0; i < matriz.length; i++) {
+				Arrays.fill(matriz[i], ' ');
+			}
 			//Words sorted
 			ArrayList<String> cosa = palabras(  );
 			//Fill a matrix with the words character by character
@@ -59,18 +58,13 @@ public class Uva400 {
 				for (int j = 0; j < newC; j++){
 					int temp = h;
 					for (int j2 = h; j2 < (j < newC-1?temp+maxTam+2:temp+maxTam ); j2++, h++) {
-						if( j2 == temp && matriz[i][j2]=='\0') break;
+						if( j2 == temp && Character.isWhitespace(matriz[i][j2])) break;
 						sb.append(matriz[i][j2]);
 					}
 				}
 				sb.append("\n");
 			}
 		}
-		
-		fichero = new FileWriter("prueba.txt");
-        pw = new PrintWriter(fichero);
-        pw.print(new String(sb));
-        fichero.close();
 		System.out.print(new String(sb));
 	}
 	
