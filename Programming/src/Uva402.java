@@ -1,6 +1,8 @@
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
+import java.util.ArrayList;
 import java.util.LinkedList;
+import java.util.List;
 import java.util.StringTokenizer;
 
 public class Uva402 {
@@ -21,37 +23,23 @@ public class Uva402 {
 			deck = new int[20];
 			for (int i = 0; i < 20; i++) 
 				deck[i]=Integer.parseInt(st.nextToken());
-			LinkedList<Integer> sol = new LinkedList<Integer>();
-			LinkedList<Integer> otro = new LinkedList<Integer>();
-			for(int i=0;i<N;++i){
-				sol.add(i+1);
-				otro.add(i+1);
+
+			List<Integer> people = new ArrayList<Integer>();
+			for (int i = 1; i <= N; i++) {
+				people.add( i );
 			}
-			int j=0;
-			while( sol.size()>X && j < deck.length){
-				int con = 0;
-				for(int i=0;i<sol.size();++i){
-					con++;
-					if(con==deck[j])
-					{
-						con=0;
-						sol.remove(i);
-						i--;
-					}
-					if(sol.size()==X)break;
+			int indexDeck = 0;
+			while( people.size() > X && indexDeck < deck.length ){
+				System.out.println(people.size() + " " + deck[indexDeck]);
+				for (int i = 0, j = 0; i < people.size() &&  people.size() > X; j++) {
+					i+=deck[indexDeck];
+					if( i-j < people.size() )
+						people.remove(i-j);
+					System.out.println(people + " ");
 				}
-//				System.out.println("carta "+ deck[j]+" "+ sol);
-				j++;
+				indexDeck++;
 			}
-			if(sol.size()!=X)
-				sol=otro;
-			int flag = 0;
-			for (int i = 0; i < sol.size(); i++) {
-				if(flag > 0 ) sb.append(" ");
-					sb.append(sol.get(i));
-					flag++;
-			}
-			sb.append("\n").append("\n");
+
 		}
 		System.out.print(new String(sb.substring(0,sb.length()-1)));
 	}
