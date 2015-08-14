@@ -1,5 +1,3 @@
-
-
 /**
  * @author Angie Milena Vega Leon
  * @linkDeArchivo http://livearchive.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=94&page=show_problem&problem=325
@@ -12,10 +10,14 @@
  * @date 27/04/2012
  **/
 
-import java.io.*;
-import java.util.*;
-import static java.lang.Integer.*;
-import static java.lang.Math.*;
+import static java.lang.Integer.MIN_VALUE;
+import static java.lang.Integer.max;
+import static java.lang.Integer.parseInt;
+
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.util.Arrays;
+import java.util.HashMap;
 
 public class Acm2324 {
 

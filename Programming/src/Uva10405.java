@@ -1,8 +1,7 @@
-import java.util.*;
-import java.io.*;
+import static java.lang.Math.max;
 
-import static java.lang.Math.*;
-import static java.lang.Integer.*;
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
 
 public class Uva10405 {
 
